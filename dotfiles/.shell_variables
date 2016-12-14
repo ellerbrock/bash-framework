@@ -1,0 +1,10 @@
+# Developer: Maik Ellerbrock <opensource@frapsoft.com>
+#
+# GitHub:  https://github.com/ellerbrock
+# Twitter: https://twitter.com/frapsoft
+#
+# Date: 08.12.2016
+
+export PS1="\[\033[1;104;33m\] \u \[\033[1;104;91m\]★\[\033[1;104;39m\] \W ➤ \[\033[0m\] "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
