@@ -1,0 +1,61 @@
+# Developer: Maik Ellerbrock <opensource@frapsoft.com>
+#
+# GitHub:  https://github.com/ellerbrock
+# Twitter: https://twitter.com/frapsoft
+#
+# Date: 08.12.2016
+
+# overwrite protection
+alias mv="mv -i"
+alias cp="cp -i"
+
+# file listing
+alias l="ls -alF"
+
+# folder navigation
+alias ..="cd .."
+alias ...="cd  ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+# directory back
+alias 1="cd -"
+alias 2="cd -2"
+alias 3="cd -3"
+alias 4="cd -4"
+alias 5="cd -5"
+alias 6="cd -6"
+alias 7="cd -7"
+alias 8="cd -8"
+alias 9="cd -9"
+
+# docker
+alias doc="docker"
+alias doci="docker images"
+alias docc="docker-compose"
+alias docm="docker-machine"
+
+# yarn
+alias ya='yarn'
+alias yai='yarn init'
+alias yaa='yarn add'
+alias yaad='yarn add --dev'
+alias yau='yarn upgrade'
+alias yarm='yarn remove'
+alias yaod='yarn outdated'
+alias yapa='yarn pack'
+alias yap='yarn publish'
+alias yasu='yarn self-update'
+alias yaru='yarn run'
+alias yat='yarn test'
+alias yacc='yarn cache clean'
+alias yack='yarn check'
+alias yals='yarn ls'
+alias yai='yarn info'
+alias yali='yarn licenses ls'
+alias yaloi='yarn login'
+alias yaloo='yarn logout'
+
+# fun
+alias sayit="Software is like sex: it's better when it's free - Linus Torvalds"
