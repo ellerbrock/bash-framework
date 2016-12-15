@@ -1,6 +1,7 @@
 # most settings done via global gitignore settings
 
 # files
+.dockerignore
 docs.md
 todo.md
 
