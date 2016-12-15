@@ -11,7 +11,7 @@
 
 # print the shell running this process
 function print_shell() {
-  DEBUG_SHELL=$(ps -hp $$ | grep -v PID | awk '{ print $4 }')
+  local DEBUG_SHELL=$(ps -hp $$ | grep -v PID | awk '{ print $4 }')
   echo "SHELL: ${DEBUG_SHELL}"
 }
 

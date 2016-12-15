@@ -25,28 +25,30 @@ source lib/core/deps.sh
 #
 # plugins (uncomment to activate + configuration via config.sh)
 #
-# source lib/plugins/backup.sh
+source lib/plugins/backup.sh
+
+backup
 
 #
 # examples
 #
 
-clear
-echo -e "${FONT_UNDERLINED}${FONT_BOLD}STATUS MESSAGES${FONT_RESET}:\n"
+# clear
+# echo -e "${FONT_UNDERLINED}${FONT_BOLD}STATUS MESSAGES${FONT_RESET}:\n"
+#
+# print_err "error message"
+# print_warn "warn message"
+# print_ok "ok message"
+#
+# echo -e "\n\n${FONT_UNDERLINED}${FONT_BOLD}ERROR MESSAGES${FONT_RESET}:\n"
+#
+# err
+# echo
+#
+# err "my error message without title"
+# echo
+#
+# err "my error message with a title" "ERROR TITLE"
+# echo
 
-print_err "error message"
-print_warn "warn message"
-print_ok "ok message"
-
-echo -e "\n\n${FONT_UNDERLINED}${FONT_BOLD}ERROR MESSAGES${FONT_RESET}:\n"
-
-err
-echo
-
-err "my error message without title"
-echo
-
-err "my error message with a title" "ERROR TITLE"
-echo
-
-# print_colors nice
+# print_colors

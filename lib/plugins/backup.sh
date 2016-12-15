@@ -15,8 +15,10 @@ DEP_APPS=("tar bzip2")
 check_deps vars ${DEP_VARS}
 check_deps apps ${DEP_APPS}
 
+unset DEP_VARS DEP_APPS
+
 function backup() {
-  exdirs=""
+  local exdirs=""
   if [[ -n ${BACKUP_EXCLUDE} ]]; then
     for ex in ${BACKUP_EXCLUDE}; do
       exdirs+=" --exclude=${ex}"
