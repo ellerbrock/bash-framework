@@ -44,4 +44,6 @@ function check_deps() {
     err "missing parameter for dependencies"
     exit 1
   fi
+
+  unset val
 }
