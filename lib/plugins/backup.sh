@@ -16,26 +16,14 @@ check_deps vars ${DEP_VARS}
 check_deps apps ${DEP_APPS}
 
 function backup() {
-  if [[ ! -d "${BACKUP_ROOT}" ]] || \
-     [[ ! -d "${BACKUP_ROOT}/${BACKUP_SRC}" ]] || \
-     [[ ! -d ${BACKUP_TARGET} ]]; then
-       err "YOUR CURRENT SETTINGS:" "ERROR: DIRECTORY DOES NOT EXIST"
-       echo
-       echo "BACKUP_ROOT: ${BACKUP_ROOT}"
-       echo "BACKUP_DIR: ${BACKUP_ROOT}/${BACKUP_SRC}"
-       echo "BACKUP_SRC: ${BACKUP_SRC}"
-       echo "BACKUP_TARGET: ${BACKUP_TARGET}"
-     exit 1
-  else
-    exdirs=""
-    if [[ ${BACKUP_EXCLUDE} ]]; then
-      for ex in ${BACKUP_EXCLUDE}; do
-        exdirs+=" --exclude=\"${ex}\""
-      done
-    fi
-
-    cd ${BACKUP_ROOT}
-    tar ${exdirs} -cjf ${BACKUP_TARGET}/${BACKUP_FILE} ${BACKUP_SRC} && \
-    print_ok "Backup finished!"
+  exdirs=""
+  if [[ -n ${BACKUP_EXCLUDE} ]]; then
+    for ex in ${BACKUP_EXCLUDE}; do
+      exdirs+=" --exclude=${ex}"
+    done
   fi
+
+  cd ${BACKUP_ROOT} && \
+  tar ${exdirs} -cjf ${BACKUP_TARGET}/${BACKUP_FILE} ${BACKUP_SRC} && \
+  print_ok "Backup finished!"
 }

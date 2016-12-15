@@ -11,7 +11,7 @@
 # SHELL SETTINGS
 #
 CONFIG_LOADED=true
-CONFIG_VERSION="0.0.1"
+CONFIG_VERSION="0.0.2"
 CONFIG_DEBUG=false
 
 #
@@ -20,13 +20,12 @@ CONFIG_DEBUG=false
 FONT_ERR="\033[1;40;91m"
 FONT_WARN="\033[1;40;93m"
 FONT_OK="\033[1;40;92m"
-FONT_RESET="\033[0m"
-
 FONT_BOLD="\033[1m"
 FONT_UNDERLINED="\033[4m"
 FONT_DIM="\033[2m"
 FONT_INVERT="\033[7m"
 FONT_BLINK="\033[5m"
+FONT_RESET="\033[0m"
 
 #
 # MESSAGE SETTINGS
@@ -48,8 +47,8 @@ ERROR_MSG_DEFAULT="GOD DAMN IT - SOMETHING WENT WRONG"
 #
 # BACKUP SETTINGS
 #
-BACKUP_ROOT="/Users/${USER}/devops"
-BACKUP_SRC="bash-framework"
-BACKUP_FILE="${BACKUP_SRC}_$(date +%s).tar.bz2"
-BACKUP_TARGET="/Users/${USER}/backup/code/shell/bash-framework"
-BACKUP_EXCLUDE=("local tmp")
+# BACKUP_ROOT="/Users/${USER}/devops"
+# BACKUP_SRC="bash-framework"
+# BACKUP_FILE="${BACKUP_SRC}_$(date +%s).tar.bz2"
+# BACKUP_TARGET="/Users/${USER}/backup/code/shell/bash-framework"
+# BACKUP_EXCLUDE=("./local ./tmp")

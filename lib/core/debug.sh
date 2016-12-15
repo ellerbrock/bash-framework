@@ -29,5 +29,5 @@ function print_args() {
   echo -e "\t${FONT_OK}\${0}${FONT_RESET}:\t${0}\n"
   echo -e "\t${FONT_OK}\${_}${FONT_RESET}:\t${_}\n"
 
-  echo -e "${FONT_RESET}\nexecuted as: \"${0} ${@}\" with PID: ${$} as $(whoami)\n"
+  echo -e "${FONT_RESET}\nexecuted as: \"${0} ${*}\" with PID: ${$} as $(whoami)\n"
 }

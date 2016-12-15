@@ -25,10 +25,12 @@ source lib/core/deps.sh
 #
 # plugins (uncomment to activate + configuration via config.sh)
 #
-
 # source lib/plugins/backup.sh
-# source lib/plugins/git.sh
 
+
+#
+# examples
+#
 clear
 echo -e "${FONT_UNDERLINED}${FONT_BOLD}STATUS MESSAGES${FONT_RESET}:\n"
 
@@ -47,4 +49,4 @@ echo
 err "my error message with a title" "ERROR TITLE"
 echo
 
-# print_colors
+# print_colors nice
