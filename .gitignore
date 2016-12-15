@@ -1,0 +1,9 @@
+# most settings done via global gitignore settings
+
+# files
+docs.md
+todo.md
+
+# folders
+local
+tmp
