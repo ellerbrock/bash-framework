@@ -19,10 +19,10 @@ Main Target: `Don't repeat yourself` and stop copy and pasting parts from other 
 ## Whats inside?
 
 - Colorful Messaging with UTF-8 Icons
-- Error Handling
-- Debugging Support
-- Plugin System
-	- Dependency Checks for required configuration settings and programs
+- Error Messaging
+- Dependency Checks for required variables (like configuration settings)
+- Run Test if required programs are installed and in PATH
+- Test if required argument length is given
 
 
 ### Plugins
