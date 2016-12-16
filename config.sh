@@ -11,7 +11,7 @@
 # SHELL SETTINGS
 #
 CONFIG_LOADED=true
-CONFIG_VERSION="0.0.5"
+CONFIG_VERSION="0.0.6"
 CONFIG_DEBUG=false
 
 #
@@ -57,8 +57,8 @@ GUI_MSGBOX_WIDTH=50
 #
 # BACKUP SETTINGS
 #
-BACKUP_ROOT="/Users/${USER}/devops"
-BACKUP_SRC="bash-framework"
-BACKUP_FILE="${BACKUP_SRC}_$(date +%s).tar.bz2"
-BACKUP_TARGET="/Users/${USER}/backup/code/shell/bash-framework"
-BACKUP_EXCLUDE=("./local ./tmp")
+# BACKUP_ROOT="/Users/${USER}/devops"
+# BACKUP_SRC="bash-framework"
+# BACKUP_FILE="${BACKUP_SRC}_$(date +%s).tar.bz2"
+# BACKUP_TARGET="/Users/${USER}/backup/code/shell/bash-framework"
+# BACKUP_EXCLUDE=("./local ./tmp")
