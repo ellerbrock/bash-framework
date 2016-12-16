@@ -29,3 +29,9 @@ function print_ok() {
   check_args_len 1 ${#}
   echo -e "${PREFIX_OK}${FONT_RESET} ${1}"
 }
+
+function press_a_key() {
+  echo -e "\n${FONT_WARN}press a key to continue ...${FONT_RESET}"
+  read -n1
+  clear
+}

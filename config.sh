@@ -11,8 +11,8 @@
 # SHELL SETTINGS
 #
 CONFIG_LOADED=true
-CONFIG_VERSION="0.0.5"
-CONFIG_DEBUG=true
+CONFIG_VERSION="0.0.6"
+CONFIG_DEBUG=false
 
 #
 # FONTS SETTINGS
@@ -26,6 +26,8 @@ FONT_DIM="\033[2m"
 FONT_INVERT="\033[7m"
 FONT_BLINK="\033[5m"
 FONT_RESET="\033[0m"
+FONT_PINK="\033[95m"
+FONT_CYAN="\033[36m"
 
 #
 # MESSAGE SETTINGS
@@ -43,6 +45,14 @@ PREFIX_SAD="${FONT_ERR} [ ☹  ]"
 ERROR_COLOR_TITLE="\033[1;41;97m"
 ERROR_COLOR_MSG="\033[0;40;93m"
 ERROR_MSG_DEFAULT="GOD DAMN IT - SOMETHING WENT WRONG"
+
+#
+# DIALOG SETTINGS
+#
+# Auto-size with height and width = 0. Maximize with height and width = -1.
+# Global-auto-size if also menu_height/list_height = 0.
+GUI_MSGBOX_HEIGHT=6
+GUI_MSGBOX_WIDTH=50
 
 #
 # BACKUP SETTINGS
