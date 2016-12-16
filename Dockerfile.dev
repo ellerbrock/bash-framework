@@ -4,13 +4,12 @@ MAINTAINER Maik Ellerbrock (https://github.com/ellerbrock)
 
 RUN \
   adduser -h /app -s /bin/bash -u 1000 -D app && \
+  mkdir /app/bash-framework && \
   apk add --no-cache \
     bash \
     bash-completion \
     bash-doc \
-    dialog \
-    git && \
-  git clone https://github.com/ellerbrock/bash-framework.git /app/bash-framework && \
+    dialog && \
   sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd && \
   rm -rf /var/cache/apkc/*
 
@@ -23,4 +22,4 @@ USER app
 
 WORKDIR /app/bash-framework
 
-ENTRYPOINT [ "bash" ]
+CMD [ "bash" ]
