@@ -11,7 +11,9 @@
 
 # usage: check_deps type deps
 function check_deps() {
-  if [ "${#}" -ge 2 ]; then
+  
+  check_args_len 2 ${#}
+
     if [[ "${1}" == "vars" ]] || [[ "${1}" == "apps" ]]; then
       for val in "${@:2}"; do
         # variables
@@ -40,10 +42,6 @@ function check_deps() {
       err "usage: ${0} type deps" "UNKNOWN PARAMETER \"${1}\""
       exit 1
     fi
-  else
-    err "missing parameter for dependencies"
-    exit 1
-  fi
 
   unset val
 }

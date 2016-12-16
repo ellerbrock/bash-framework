@@ -9,6 +9,11 @@
 
 [[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" && exit 1
 
+# Usage:
+#
+# err "my error message without title"
+# err "my error message with a title" "ERROR TITLE"
+
 function err_title() {
   echo -e "${ERROR_COLOR_TITLE} ${1} ${FONT_RESET}"
 }

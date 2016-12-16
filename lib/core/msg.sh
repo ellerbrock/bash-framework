@@ -9,26 +9,23 @@
 
 [[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" && exit 1
 
+# Usage:
+#
+# print_err "error message"
+# print_warn "warn message"
+# print_ok "ok message"
+
 function print_err() {
-  if [[ ${1} ]]; then
-    echo -e "${PREFIX_ERR}${FONT_RESET} ${1}"
-  else
-    err "missing parameter"
-  fi
+  check_args_len 1 ${#}
+  echo -e "${PREFIX_ERR}${FONT_RESET} ${1}"
 }
 
 function print_warn() {
-  if [[ ${1} ]]; then
-    echo -e "${PREFIX_WARN}${FONT_RESET} ${1}"
-  else
-    err "missing parameter"
-  fi
+  check_args_len 1 ${#}
+  echo -e "${PREFIX_WARN}${FONT_RESET} ${1}"
 }
 
 function print_ok() {
-  if [[ ${1} ]]; then
-    echo -e "${PREFIX_OK}${FONT_RESET} ${1}"
-  else
-    err "missing parameter"
-  fi
+  check_args_len 1 ${#}
+  echo -e "${PREFIX_OK}${FONT_RESET} ${1}"
 }
