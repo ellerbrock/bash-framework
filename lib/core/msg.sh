@@ -17,7 +17,7 @@
 
 function print_err() {
   check_args_len 1 ${#}
-  echo -e "${PREFIX_ERR}${FONT_RESET} ${1}"
+  echo -e "${PREFIX_ERR}${FONT_RESET} ${1}" >&2
 }
 
 function print_warn() {

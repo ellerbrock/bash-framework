@@ -7,7 +7,7 @@
 #
 # Date: 07.12.2016
 
-[[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" && exit 1
+[[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" >&2 && exit 1
 
 # optional parameter: [ nice ]
 function print_colors() {
