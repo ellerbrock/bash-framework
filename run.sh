@@ -4,8 +4,6 @@
 #
 # GitHub:  https://github.com/ellerbrock
 # Twitter: https://twitter.com/frapsoft
-#
-# Date: 06.12.2016
 
 # set -u  # stop when undeclared variables get consumed
 # set -e  # stop when exitcode != 0

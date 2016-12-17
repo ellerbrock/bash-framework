@@ -4,8 +4,6 @@
 #
 # GitHub:  https://github.com/ellerbrock
 # Twitter: https://twitter.com/frapsoft
-#
-# Date: 06.12.2016
 
 #
 # SHELL SETTINGS
