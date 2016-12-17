@@ -8,7 +8,7 @@
 #
 # Date: 17.12.2016
 
-[[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" && exit 1
+[[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" >&2 && exit 1
 
 # usage: file_exists filename
 function file_exists() {

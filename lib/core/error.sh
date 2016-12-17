@@ -7,7 +7,7 @@
 #
 # Date: 07.12.2016
 
-[[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" && exit 1
+[[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" >&2 && exit 1
 
 # Usage:
 #
@@ -15,11 +15,11 @@
 # err "my error message with a title" "ERROR TITLE"
 
 function err_title() {
-  echo -e "${ERROR_COLOR_TITLE} ${1} ${FONT_RESET}"
+  echo -e "${ERROR_COLOR_TITLE} ${1} ${FONT_RESET}" >&2
 }
 
 function err_msg() {
-  echo -e "${FONT_ERR} ✘ ${1} ${FONT_RESET}"
+  echo -e "${FONT_ERR} ✘ ${1} ${FONT_RESET}" >&2
 }
 
 # error [ message ] [ title ]

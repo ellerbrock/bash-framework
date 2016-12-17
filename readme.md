@@ -6,7 +6,7 @@ _Write faster Shell Scripts with a modern look and feel._
 
 [![Bash Shell](https://badges.frapsoft.com/bash/v1/bash.png?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badges/) [![Gitter Chat](https://badges.gitter.im/frapsoft/frapsoft.svg)](https://gitter.im/frapsoft/frapsoft/)
 
-![](https://github.frapsoft.com/screenshots/bash-framework-v1.jpg)
+![](https://github.frapsoft.com/screenshots/bash-framework-v2.jpg)
 
 ## Introduction
 
@@ -19,7 +19,8 @@ Main Target: `Don't repeat yourself` and stop copy and pasting parts from other 
 ## Whats inside?
 
 - Colorful Messaging with UTF-8 Icons
-- Error Messaging
+- Dialogs (Messages, Prompts, Inputs, Menus ...)
+- Error Handling
 - Dependency Checks for required variables (like configuration settings)
 - Run Test if required programs are installed and in PATH
 - Test if required argument length is given
@@ -38,6 +39,9 @@ Yeah why don't give it a quick shot even its not really very useful yet.
 and play with it via:
 
 `docker run -it frapsoft/bash-framework`
+
+- <https://hub.docker.com/r/frapsoft/bash-framework/>
+- <https://quay.io/repository/ellerbrock/bash-framework>
 
 ## Contact / Social Media
 

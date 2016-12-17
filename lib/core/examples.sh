@@ -6,7 +6,9 @@
 # Twitter: https://twitter.com/frapsoft
 # Docker:  https://hub.docker.com/frapsoft
 #
-# Date: 16.12.2016
+# Date: 17.12.2016
+
+[[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" >&2 && exit 1
 
 #
 # Status Messages
@@ -35,13 +37,10 @@ function status_message_examples() {
 #
 function error_message_examples() {
   echo -e "${FONT_UNDERLINED}${FONT_BOLD}ERROR MESSAGES${FONT_RESET}:\n"
-
   err
   echo
-
   err "my error message without title"
   echo
-
   err "my error message with a title" "ERROR TITLE"
   echo
 }
@@ -69,7 +68,6 @@ function gui_examples()
       255) gui_msgbox "you canceled with ESC" "RESULT: ESC";;
     esac
   }
-
   gui_yesno "callback" "Do you like the Bash Framework?"
 }
 
