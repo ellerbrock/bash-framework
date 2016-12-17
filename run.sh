@@ -30,10 +30,10 @@ source lib/core/io.sh
 # Plugins
 #
 # source lib/plugins/backup.sh
-# source lib/plugins/gui.sh
+source lib/plugins/gui.sh
 
 #
 # Welcome / show examples
 #
-# source lib/core/examples.sh
-# source lib/core/welcome.sh
+source lib/core/examples.sh
+source lib/core/welcome.sh
