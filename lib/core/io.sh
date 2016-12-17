@@ -5,8 +5,6 @@
 # GitHub:  https://github.com/ellerbrock
 # Twitter: https://twitter.com/frapsoft
 # Docker:  https://hub.docker.com/frapsoft
-#
-# Date: 17.12.2016
 
 [[ ! ${CONFIG_LOADED} ]] && echo "ERROR: PLEASE DON'T RUN DIRETLY (CONFIGURATION REQUIRED)" >&2 && exit 1
 
@@ -127,6 +125,39 @@ function dir_exists() {
   fi
 }
 
+# usage: get_files callback search
+function get_files() {
+  check_args_len 2 ${#}
+
+  local list
+
+  for f in ${2}; do
+    if [[ -f ${f} ]]; then
+      list="${list} ${f}"
+    fi
+  done
+
+  if [[ ${CONFIG_DEBUG} == true ]]; then
+    print_ok "Seach: \"${2}\""
+    print_ok "Result: \"${list}\""
+  fi
+
+  eval "${1} ${list}"
+}
+
+
+#### TODO ####
+#
+# - replace text replace
+# - file rename
+# - search and do something with it
+# - crypt
+# - pack
+
+
+
+
+
 #
 # IO Examples
 #
@@ -157,3 +188,24 @@ function dir_exists() {
 
 # dir_exists tmp
 # dir_exists tmpxxx
+
+# example callback for
+# function file_handle() {
+#   # check_args_len 1 ${#}
+#   if [[ ${#} -ge 1 ]]; then
+#     for f in "${@}"; do
+#       # do here the file handling ...
+#       # file_is_writeable ${f}
+#       if [[ ${CONFIG_DEBUG} == true ]]; then
+#         print_ok "found file: \"${f}\""
+#       fi
+#     done
+#   else
+#     if [[ ${CONFIG_DEBUG} == true ]]; then
+#       print_warn "WARN: no files found for search"
+#     fi
+#   fi
+# }
+#
+# # get_files "file_handle" "tmp/*"     # return all files from tmp
+# get_files "file_handle" "tmp/*"  # return all files from tmp
