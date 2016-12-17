@@ -23,4 +23,4 @@ USER app
 
 WORKDIR /app/bash-framework
 
-ENTRYPOINT [ "bash" ]
+CMD [ "/app/bash-framework/run.sh" ]
